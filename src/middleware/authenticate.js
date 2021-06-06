@@ -10,7 +10,7 @@ const authenticate = (req, res, next) => {
     return unauthenticated();
   }
 
-  const token = authHeader.split(' ')[1];
+  const token = authHeader.split(' ')[0];
   if(!token) {
     return unauthenticated();
   }

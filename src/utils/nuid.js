@@ -40,12 +40,12 @@ const challengeCredentials = (credential) =>  {
 }
 
 const verifyProof = (proof, jwt) => {
-  const body = JSON.stringify({
-    'nuid.credential.challenge/jwt': jwt,
-    'nuid.credential/proof': proof
+  let body = JSON.stringify({
+    'nuid.credential/proof': proof,
+    'nuid.credential.challenge/jwt': jwt
   });
 
-  const opts = {
+  let opts = {
     method: 'POST',
     headers: getHeaders(),
     body: body

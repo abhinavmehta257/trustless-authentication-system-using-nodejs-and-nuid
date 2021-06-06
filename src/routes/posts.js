@@ -12,7 +12,7 @@ const posts = [
     showTitle: "tom and jerry"
   },
   {
-    name: "random",
+    name: "rishabh",
     showTitle: "Mr. Bean"
   }
 ]
