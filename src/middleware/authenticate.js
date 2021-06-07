@@ -2,8 +2,8 @@ import mongoose from 'mongoose';
 import { verify } from 'jsonwebtoken';
 
 const authenticate = (req, res, next) => {
-  const unauthenticated = () => res.status(401).end();
-  const unauthorized = () => res.status(403).end();
+  const unauthenticated = () => res.status(401).send('Access Denied');
+  const unauthorized = () => res.status(403).end('Access Denied');
 
   const authHeader = req.headers.authorization;
   if (!authHeader) {

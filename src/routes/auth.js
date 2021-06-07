@@ -31,7 +31,7 @@ router.post('/signup', async (req, res) => {
       name: req.body.name
     });
     await newUser.save();
-    return res.status(200).end();
+    return res.status(200).send("sigup successful");
   } catch(err) {
     console.log(err);
     res.status(400).send(err);
